@@ -10,7 +10,7 @@ from sklearn.ensemble import RandomForestClassifier  # 随机森林分类模型
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, roc_curve 
 from sklearn import preprocessing
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler, OrdinalEncoder, PolynomialFeatures
 from sklearn.metrics import accuracy_score
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import RandomForestRegressor
@@ -25,3 +25,4 @@ from sklearn.metrics import (
     r2_score                     # R²分数，越接近1越好
 )
 from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import Pipeline
