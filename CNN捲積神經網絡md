@@ -1,0 +1,17 @@
+# PyTorch CNN 核心組件函數與參數詳解
+
+## 1. 卷積層 (Convolution Layer)
+### `nn.Conv2d` 卷積操作
+| 參數             | 類型        | 功能說明                         | 默認值       |
+|------------------|-------------|----------------------------------|-------------|
+| `in_channels`    | int         | 輸入特徵圖的通道數（如RGB=3）     | 必填        |
+| `out_channels`   | int         | 輸出的通道數（卷積核數量）        | 必填        |
+| `kernel_size`    | int/tuple   | 卷積核尺寸（如3或(3,3)）          | 必填        |
+| `stride`         | int/tuple   | 滑動步長（控制特徵圖縮小程度）     | 1          |
+| `padding`        | int/tuple   | 邊緣填充像素數（保持空間維度）     | 0          |
+| `padding_mode`   | str         | 填充模式（'zeros', 'reflect'等）  | 'zeros'    |
+| `bias`           | bool        | 是否添加偏置項                    | True       |
+
+```python
+# 實例：3通道輸入，8個3x3卷積核，填充1像素
+self.conv1 = nn.Conv2d(3, 8, kernel_size=3, padding=1)
