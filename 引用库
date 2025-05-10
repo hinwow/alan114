@@ -1,5 +1,7 @@
 import matplotlib.pyplot as plt  # 数据可视化
 import seaborn as sns        # 高级可视化工具
+import pandas as pd
+import numpy as np
 from sklearn.model_selection import train_test_split, GridSearchCV  # 数据集划分和超参数搜索
 from sklearn.preprocessing import StandardScaler, OrdinalEncoder    # 数据预处理
 from sklearn.compose import ColumnTransformer      # 多列不同预处理组合
